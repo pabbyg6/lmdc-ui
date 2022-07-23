@@ -11,6 +11,8 @@
           "type": "ui"
            
         },
+        
+   
         "@schematics/angular:application": {
           "strict": true
         }
@@ -101,9 +103,50 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "projects/components/src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "components": {
+      "projectType": "library",
+      "root": "projects/components",
+      "sourceRoot": "projects/components/src",
+      "prefix": "lmdc",
+      "schematics": {
+        "@schematics/angular:component": {
+          "type": "ui",
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/components/src/test.ts",
+            "tsConfig": "projects/components/tsconfig.spec.json",
+            "karmaConfig": "projects/components/karma.conf.js"
           }
         }
       }

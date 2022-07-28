@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@use './../projects/components/index' as lmdc-core;
+:root {
+  --primary-color: #4056F4;
+}
+
+$my-color-theme: lmdc-core.color-define-palette((primary-color: green,
+secondary-color: black,
+surface-color: orange,
+error-color: blue));
+
+
+
+@include lmdc-core.button-theme((primary: green, accent: red))  {
+  .lmdc-button {
+    border-radius: 12px;
+  }
+}; 
+.hero-button {
+  
+
+    
+    @include lmdc-core.button-theme((primary: green, accent: red))  {
+      @include lmdc-core.button-density((padding: 12px))
+    }; 
+
+  @include lmdc-core.button-density((border-radius: 12px, border-width: 0))
+
+
+}

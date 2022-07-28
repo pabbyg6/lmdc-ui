@@ -1,12 +1,39 @@
 {
-  "name": "components",
-  "version": "0.0.1",
+  "name": "@lmdc-ui/components",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0"
+    "@angular/core": "^14.0.0",
+    "subsink": "^1.0.2"
+  },
+  "exports": {
+    ".": {
+      "sass": "./_index.scss"
+    },
+    "./core/**/*.scss": {
+      "sass": "./core/**/*.scss"
+    },
+    "./lib/*": {
+      "sass": "./src/lib/**/*.scss"
+    }
   },
   "dependencies": {
-    "subsink": "^1.0.2",
     "tslib": "^2.3.0"
-  }
+  },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.",
+  "main": "karma.conf.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pabbyg6/lmdc-ui.git"
+  },
+  "author": "pepperpotpoppins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pabbyg6/lmdc-ui/issues"
+  },
+  "homepage": "https://github.com/pabbyg6/lmdc-ui#readme"
 }

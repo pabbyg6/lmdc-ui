@@ -1,0 +1,11 @@
+@use "sass:map";
+$base-palette: (primary-color: #F26419,
+secondary-color: #5C95FF,
+surface-color: #E0D8DE,
+error-color: #A5243D);
+
+@function define-palette($theme) {
+  @return map.merge($base-palette, $theme);
+}
+
+

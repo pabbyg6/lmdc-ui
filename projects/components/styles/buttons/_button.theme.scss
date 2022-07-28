@@ -1,0 +1,105 @@
+@use "sass:map";
+@use "sass:color";
+@use './button.base' as button;
+@import './../theme/theme';
+
+@function define-palette($palette) {
+  @return (primary: map.get($palette, primary), accent: map.get($palette, accent));
+}
+
+
+.lmdc-button {
+
+
+ @include  button.base();
+  &[data-color="primary"] {
+
+    color: white;
+  }
+
+  &[data-appearance="outline"] {
+    background-color: transparent;
+    color: var(--black);
+    border: 1px solid var(--outline);
+  }
+  &[data-size="medium"] {
+    font-size: 1rem;
+    font-weight: 700;
+
+    padding: 10px 24px;
+  }
+
+  &[data-size="normal"] {
+    font-size: 1rem;
+    font-weight: 500;
+
+
+  }
+
+  &[data-size="small"] {
+    font-size: 0.8rem;
+    font-weight: 500;
+   
+    padding: 8px 22px;
+  }
+}
+
+
+/**
+  $palette: primary, accent
+  $config: border-radius, border-width, line-height, padding
+*/
+@mixin theme($theme) {
+  $config: define-palette($theme);
+  $primary: map.get($config, primary);
+  $accent: map.get($config, accent);
+  $color: contrast($primary);
+  
+  .lmdc-button {
+    color: color;
+  }
+  .lmdc-primary {
+    background-color: $primary;
+    
+  } 
+
+  .lmdc-accent {
+    background-color: $accent;
+  }
+
+  @content
+}
+
+
+
+/**
+sets the density and size of the button
+*/
+@mixin density($scaffold) {
+
+
+
+  .lmdc-button {
+    border-radius: map.get($scaffold, border-radius);;
+    border-width: map.get($scaffold, border-width);
+    border-color: map.get($scaffold, border-radius);
+    line-height: map.get($scaffold, line-height);
+    padding: map.get($scaffold, padding);
+  }
+  
+  
+}
+
+@function contrast($background) {
+  $r: (max(red(#FFF), red($background))) - (min(red(#FFF), red($background)));
+  $g: (max(green(#FFF), green($background))) - (min(green(#FFF), green($background)));
+  $b: (max(blue(#FFF), blue($background))) - (min(blue(#FFF), blue($background)));
+  $sum-rgb: $r + $g + $b;
+  
+  @if $sum-rgb < 500 {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+
+}

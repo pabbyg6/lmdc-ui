@@ -1,0 +1,137 @@
+.lmdc-label {
+  font-weight: 500;
+
+}
+
+input.lmdc-input {
+  outline: none;
+}
+
+.lmdc-form-field {
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.lmdc-input-container {
+  box-sizing: content-box;
+  height: inherit;
+  padding: 0 12px;
+  
+}
+.lmdc-input {
+  outline: none;
+  height: inherit;
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+
+
+  margin: 0;
+
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.class-label {
+  margin-bottom: 16px;
+}
+
+.lmdc-input-wrapper {
+  position: relative;
+
+  height: 52px;
+}
+
+.lmdc-compact {
+  &  .lmdc-input {
+    padding: 8px;
+  }
+
+  & .lmdc-label {
+    font-size: 1rem;
+    line-height: 1.4rem;
+
+    .lmdc-hint {
+      height: 1rem;
+    
+    }
+  }
+}
+
+.lmdc-hint {
+  height: 1.7rem;
+
+}
+
+
+.lmdc-form-field-outline {
+  position: absolute;
+  height: 52px;
+  background-color: transparent;
+
+  width: inherit;
+  top: 0.001em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border: 1px solid rgb( 121, 116, 126, 0.5);
+
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+
+  &--invalid {
+    border-color: var(--secondary-color);
+  }
+
+  &--highlight {
+    border-color: var(--primary-color);
+  }
+  &--focus-transparent {
+    border: 2px solid transparent;
+  }
+}
+
+.lmdc-form-field {
+
+
+   &--active {
+    & .lmdc-form-field-outline {
+      border-color: var(--primary-color)
+
+    }
+  }
+
+   &--invalid {
+
+    & .lmdc-form-field-outline {
+      border-color: #F33016
+
+    }
+  }
+}
+
+.lmdc-form-field-outline {
+  position: absolute;
+  transition: 0.2s linear all;
+}
+.lmdc-form-field--focus {
+  & .lmdc-form-field-outline {
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;  
+    transition: 0.2s ease-in all;
+  }
+}
+
+.lmdc-form-field-outline--focus-transparent{
+  border-width: 2px;
+  border-style: solid;
+  position: absolute;
+  border-color: transparent;
+  position: absolute;
+}
+.lmdc-form-field-outline {
+  z-index: -999;
+}

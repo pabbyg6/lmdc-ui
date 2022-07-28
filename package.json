@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:components": "ng build components",
+    "postbuild:components": "scripts/copy-files.ts"
+
   },
   "private": true,
   "dependencies": {

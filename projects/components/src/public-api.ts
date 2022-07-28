@@ -3,4 +3,5 @@
  */
 
 
-export * from './lib/input/input.module';
+export * from './lib/input/public_api';
+export * from './lib/button/public_api';

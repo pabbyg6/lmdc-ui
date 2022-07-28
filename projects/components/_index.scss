@@ -1,0 +1,4 @@
+@forward './styles/theme/theme' as color-*;
+@forward './styles/buttons/button.import' as button-*;
+@forward './styles/input/input.import';
+@forward './styles/typography/typography.import';

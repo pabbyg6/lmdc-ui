@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LmdcInputUi } from './input.ui';
 import { LmdcInput } from './input';
+import { LmdcLabel } from './label.directive';
 
 
 
 @NgModule({
   declarations: [
     LmdcInputUi,
-    LmdcInput
+    LmdcInput,
+    LmdcLabel
   ],
   imports: [
     CommonModule
@@ -16,6 +18,7 @@ import { LmdcInput } from './input';
   exports: [
     LmdcInputUi,
     LmdcInput,
+    LmdcLabel,
   ]
 })
 export class LmdcInputModule { }

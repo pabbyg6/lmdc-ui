@@ -9,10 +9,7 @@
         "@schematics/angular:component": {
           "style": "scss",
           "type": "ui"
-           
         },
-        
-   
         "@schematics/angular:application": {
           "strict": true
         }
@@ -98,13 +95,18 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/components/styles/**/"
+              ]
+            },
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "projects/components/src/styles.scss"
+              "projects/components/src/styles.scss",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -119,11 +121,10 @@
       "schematics": {
         "@schematics/angular:component": {
           "type": "ui",
-          "style": "scss"
+          "style": "scss",
+          "prefix": "lmdc"
         },
-        "@schematics/angular:directive": {
-          
-        }
+        "@schematics/angular:directive": {}
       },
       "architect": {
         "build": {
@@ -151,6 +152,5 @@
         }
       }
     }
-   
   }
 }

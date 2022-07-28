@@ -1,0 +1,18 @@
+$padding: 0 16px !default;
+$margin: 0 !default;
+$border-radius: 4px !default;
+
+$line-height: 44px !default;
+
+@mixin base() {
+  box-sizing: border-box;
+  position: relative;
+  border: none;
+  display: inline-block;
+
+  line-height: $line-height;
+  border-radius: $border-radius;
+  margin: $margin;
+  padding: $padding;
+
+}

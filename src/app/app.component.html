@@ -1,13 +1,35 @@
-<lmdc-input>
-  <input lmdcInput>
-</lmdc-input>
+<div>
+  <lmdc-input>
+    <label lmdcLabel>First Name</label>
+    <input lmdcInput>
+  </lmdc-input>
+  <lmdc-input>
+    <label lmdcLabel>Last Name</label>
+    <input lmdcInput>
+  </lmdc-input>
+</div>
 
-<lmdc-input>
-  <input lmdcInput>
-</lmdc-input>
 
+<form [formGroup]="formGroup">
+  <lmdc-input >
+    <label lmdcLabel>Name</label>
+    <input lmdcInput formControlName="name">
+  </lmdc-input>
+  <lmdc-input >
+    <label lmdcLabel>Email</label>
+    <input lmdcInput formControlName="email">
+  </lmdc-input>
+</form>
 
 
 <lmdc-input style="width: 100%">
   <input lmdcInput>
 </lmdc-input>
+<div class="button-display">
+  <button lmdc-button>Flat Button</button>
+<button lmdc-button appearance="outline">Outlined Button</button>
+</div>
+
+<div class="button-display">
+<button lmdc-button class="hero-button">Hello World</button>
+</div>

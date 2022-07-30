@@ -4,14 +4,14 @@
   --primary-color: #4056F4;
 }
 
-$my-color-theme: lmdc-core.color-define-palette((primary-color: green,
+$my-color-theme: lmdc-core.color-define-palette((primary-color: #4056F4,
 secondary-color: black,
 surface-color: orange,
 error-color: blue));
 
 
 
-@include lmdc-core.button-theme((primary: green, accent: red))  {
+@include lmdc-core.button-theme((primary: #95D7AE, accent: red))  {
   .lmdc-button {
     border-radius: 12px;
   }
@@ -20,7 +20,7 @@ error-color: blue));
   
 
     
-    @include lmdc-core.button-theme((primary: green, accent: red))  {
+    @include lmdc-core.button-theme((primary: #008000, accent: red))  {
       @include lmdc-core.button-density((padding: 12px))
     }; 
 

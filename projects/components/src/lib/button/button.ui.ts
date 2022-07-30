@@ -9,7 +9,10 @@ import { LmdcButtonAppearance, LmdcButtonColor, LmdcButtonSize } from './typings
   inputs: ['size', 'color'],
   encapsulation: ViewEncapsulation.None,
   host: {
-    '[class.lmdc-primary]': `color == 'primary'`,
+    'class': 'lmdc-button',
+    '[class.lmdc-primary]': `color == 'primary' && appearance != 'outline'`,
+    '[class.lmdc-button-outline]': `appearance == 'outline'`
+
   },
 })
 export class ButtonUi implements OnInit {

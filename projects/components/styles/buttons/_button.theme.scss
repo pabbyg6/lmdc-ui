@@ -9,28 +9,14 @@
 
 
 .lmdc-button {
-
+  
 
  @include  button.base();
-  &[data-color="primary"] {
-
-    color: white;
-  }
-
-  &[data-appearance="outline"] {
-    background-color: transparent;
-    color: var(--black);
-    border: 1px solid var(--outline);
-  }
-  &[data-size="medium"] {
-    font-size: 1rem;
-    font-weight: 700;
-
-    padding: 10px 24px;
-  }
-
+  
+ 
+ 
   &[data-size="normal"] {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 500;
 
 
@@ -55,12 +41,11 @@
   $accent: map.get($config, accent);
   $color: contrast($primary);
   
-  .lmdc-button {
-    color: color;
-  }
+ 
   .lmdc-primary {
     background-color: $primary;
-    
+    color: $color;
+
   } 
 
   .lmdc-accent {
@@ -69,8 +54,6 @@
 
   @content
 }
-
-
 
 /**
 sets the density and size of the button
@@ -90,16 +73,19 @@ sets the density and size of the button
   
 }
 
+
 @function contrast($background) {
-  $r: (max(red(#FFF), red($background))) - (min(red(#FFF), red($background)));
-  $g: (max(green(#FFF), green($background))) - (min(green(#FFF), green($background)));
-  $b: (max(blue(#FFF), blue($background))) - (min(blue(#FFF), blue($background)));
-  $sum-rgb: $r + $g + $b;
-  
-  @if $sum-rgb < 500 {
-    @return #000;
-  } @else {
+  // $r: (max(red(#FFF), red($background))) - (min(red(#FFF), red($background)));
+  // $g: (max(green(#FFF), green($background))) - (min(green(#FFF), green($background)));
+  // $b: (max(blue(#FFF), blue($background))) - (min(blue(#FFF), blue($background)));
+  // $sum-rgb: $r + $g + $b;
+
+  $sum-rgb: 0.2126 * red($background) + 0.7152 * green($background) + 0.0772 * blue($background);
+  @debug $sum-rgb;
+  @if $sum-rgb < 100 {
     @return #fff;
+  } @else {
+    @return #000;
   }
 
 }

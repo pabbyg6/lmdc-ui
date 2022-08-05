@@ -75,13 +75,9 @@ sets the density and size of the button
 
 
 @function contrast($background) {
-  // $r: (max(red(#FFF), red($background))) - (min(red(#FFF), red($background)));
-  // $g: (max(green(#FFF), green($background))) - (min(green(#FFF), green($background)));
-  // $b: (max(blue(#FFF), blue($background))) - (min(blue(#FFF), blue($background)));
-  // $sum-rgb: $r + $g + $b;
 
   $sum-rgb: 0.2126 * red($background) + 0.7152 * green($background) + 0.0772 * blue($background);
-  @debug $sum-rgb;
+
   @if $sum-rgb < 100 {
     @return #fff;
   } @else {

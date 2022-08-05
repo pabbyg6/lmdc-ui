@@ -97,7 +97,7 @@
             "inlineStyleLanguage": "scss",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "projects/components/styles/**/"
+                "projects/components/styles/"
               ]
             },
             "assets": [
@@ -120,7 +120,7 @@
       "prefix": "lmdc",
       "schematics": {
         "@schematics/angular:component": {
-          "type": "ui",
+          "type": "",
           "style": "scss",
           "prefix": "lmdc"
         },

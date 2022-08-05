@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { ButtonUi, LmdcInputModule } from 'projects/components/src/public-api';
+import { ButtonUi, LmdcInputModule, LmdcTable } from 'projects/components/src/public-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     ReactiveFormsModule,
     ButtonUi,
-   
+   LmdcTable,
     LmdcInputModule,
   ],
   providers: [],

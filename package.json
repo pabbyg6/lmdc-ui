@@ -9,11 +9,11 @@
     "test": "ng test",
     "build:components": "ng build components",
     "postbuild:components": "scripts/copy-files.ts"
-
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0",
+    "@angular/cdk": "^14.1.1",
     "@angular/common": "^14.0.0",
     "@angular/compiler": "^14.0.0",
     "@angular/core": "^14.0.0",

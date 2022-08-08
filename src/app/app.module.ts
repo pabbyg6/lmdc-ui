@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { ButtonUi, LmdcInputModule, LmdcTable } from 'projects/components/src/public-api';
-
+import { LmdcButton, LmdcCard, LmdcIcon, LmdcInputModule, LmdcTableModule } from 'projects/components/src/public-api';
+import {CdkTableModule} from '@angular/cdk/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LmdcIconButton } from 'projects/components/src/lib/icon-button/lmdc-icon-button';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,12 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    ButtonUi,
-   LmdcTable,
+    LmdcButton,
+    LmdcIcon,
+    CdkTableModule,
+    LmdcIconButton,
+    LmdcTableModule,
+    LmdcCard,
     LmdcInputModule,
   ],
   providers: [],

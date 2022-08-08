@@ -1,0 +1,15 @@
+.lmdc-icon-button {
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+ 
+  
+}
+
+.lmdc-icon-button:hover {
+  background-color: var(--lmdc-sys-color-hover-state);
+  
+}

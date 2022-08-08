@@ -124,7 +124,9 @@
           "style": "scss",
           "prefix": "lmdc"
         },
-        "@schematics/angular:directive": {}
+        "@schematics/angular:directive": {
+          
+        }
       },
       "architect": {
         "build": {

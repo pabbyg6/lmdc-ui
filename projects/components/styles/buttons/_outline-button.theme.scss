@@ -1,7 +1,7 @@
 .lmdc-button-outline {
   background-color: transparent;
-  color: #4a4a4a;
-  border: 1.1px solid #b2aeb6;
+  color: var(--lmdc-sys-color-on-surface);
+  border: 1.1px solid var(--lmdc-sys-color-outline);
   font-variation-settings: 'wght' 490;
 
 }

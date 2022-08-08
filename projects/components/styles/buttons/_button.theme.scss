@@ -8,8 +8,13 @@
 }
 
 
+
 .lmdc-button {
-  
+ &.lmdc-primary {
+    background-color: var(--lmdc-sys-color-primary);
+    color: var(--lmdc-sys-color-on-primary);
+
+  } 
 
  @include  button.base();
   
@@ -42,17 +47,13 @@
   $color: contrast($primary);
   
  
-  .lmdc-primary {
-    background-color: $primary;
-    color: $color;
-
-  } 
+  
 
   .lmdc-accent {
     background-color: $accent;
   }
 
-  @content
+
 }
 
 /**

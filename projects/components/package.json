@@ -3,8 +3,7 @@
   "version": "0.0.42",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0",
-    "subsink": "^1.0.2"
+    "@angular/core": "^14.0.0"
   },
   "exports": {
     ".": {
@@ -18,7 +17,9 @@
     }
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "@angular/cdk": "^14.1.1",
+    "tslib": "^2.3.0",
+    "subsink": "^1.0.2"
   },
   "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.",
   "main": "karma.conf.js",

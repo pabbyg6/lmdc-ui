@@ -11,7 +11,7 @@ $line-height: 24px !default;
   display: inline-block;
   cursor: pointer;
   line-height: $line-height;
-  border-radius: $border-radius;
+  border-radius: var(--lmdc-sys-button-outline-border-radius);
   margin: $margin;
   padding: $padding;
   min-height: 40px;

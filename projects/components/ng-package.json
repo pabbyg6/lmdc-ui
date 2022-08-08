@@ -8,6 +8,10 @@
     ]
   },
   
+  "allowedNonPeerDependencies": [
+    "subsink",
+    "@angular/cdk"
+  ],
   "assets":[
     "./_index.scss",
     "./core/**/*.scss",

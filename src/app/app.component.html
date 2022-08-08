@@ -1,39 +1,78 @@
-<div>
+<div class="terrarium">
   <lmdc-input>
     <label lmdcLabel>First Name</label>
-    <input lmdcInput>
+    <input lmdcInput />
   </lmdc-input>
   <lmdc-input>
     <label lmdcLabel>Last Name</label>
-    <input lmdcInput>
+    <input lmdcInput />
+  </lmdc-input>
+
+  <form [formGroup]="formGroup">
+    <lmdc-input>
+      <label lmdcLabel>Name</label>
+      <input lmdcInput formControlName="name" />
+    </lmdc-input>
+    <lmdc-input>
+      <label lmdcLabel>Email</label>
+      <input lmdcInput formControlName="email" />
+    </lmdc-input>
+  </form>
+
+  <lmdc-input style="width: 100%">
+    <input lmdcInput />
   </lmdc-input>
 </div>
-
-
-<form [formGroup]="formGroup">
-  <lmdc-input >
-    <label lmdcLabel>Name</label>
-    <input lmdcInput formControlName="name">
-  </lmdc-input>
-  <lmdc-input >
-    <label lmdcLabel>Email</label>
-    <input lmdcInput formControlName="email">
-  </lmdc-input>
-</form>
-
-
-<lmdc-input style="width: 100%">
-  <input lmdcInput>
-</lmdc-input>
-<div class="button-display">
+<div class="button-display terrarium">
   <button lmdc-button>Flat Button</button>
-<button lmdc-button appearance="outline">Outlined Button</button>
+  <button lmdc-button appearance="outline">Outlined Button</button>
+  <button lmdc-icon-button [fontSize]="32"><lmdc-icon>home</lmdc-icon></button>
+  <div class="flex items-center">
+    <lmdc-icon>email</lmdc-icon>
+    <lmdc-icon [size]="32">send</lmdc-icon>
+  </div>
 </div>
 
-<div class="button-display">
-<button lmdc-button class="hero-button">Hello World</button>
+<div class="terrarium">
+  <table
+    cdk-table
+    [dataSource]="PERIODIC_TABLE"
+    lmdc-table
+    class="lmdc-card lmdc-card--elevated"
+  >
+    <ng-container cdkColumnDef="position">
+      <th cdk-header-cell *cdkHeaderCellDef>No.</th>
+      <td cdk-cell *cdkCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container cdkColumnDef="name">
+      <th cdk-header-cell *cdkHeaderCellDef>Name</th>
+      <td cdk-cell *cdkCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container cdkColumnDef="weight">
+      <th cdk-header-cell *cdkHeaderCellDef>Weight</th>
+      <td cdk-cell *cdkCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container cdkColumnDef="symbol">
+      <th cdk-header-cell *cdkHeaderCellDef>Symbol</th>
+      <td cdk-cell *cdkCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
+<div class="terrarium">
+  <div lmdc-card>Some Card with Card Tag</div>
 </div>
 
-<div>
-  <lmdc-table></lmdc-table>
+<div class="terrarium">
+  <lmdc-card appearance="elevated"> Elevated Card </lmdc-card>
+  <lmdc-card appearance="filled"> Filled Card </lmdc-card>
+  <lmdc-card appearance="outlined"> Outlined Card </lmdc-card>
 </div>

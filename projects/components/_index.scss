@@ -1,4 +1,8 @@
-@forward './styles/theme/theme' as color-*;
+@forward './styles/theme/theme.import';
 @forward './styles/buttons/button.import' as button-*;
 @forward './styles/input/input.import';
 @forward './styles/typography/typography.import';
+@forward './styles/table/table.import';
+@forward './styles/card/card.import';
+@forward './styles/icon/icon.import';
+@forward './styles/buttons/icon/icon-button.import';

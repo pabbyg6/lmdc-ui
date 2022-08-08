@@ -1,0 +1,34 @@
+   .lmdc-card {
+  border-radius: 4px;
+  padding: 16px;
+  display: block;
+  box-sizing: border-box;
+  &.lmdc-card--elevated {
+    box-shadow: rgba(47, 49, 51, 0.05) 0px 0px 1px, rgba(47, 49, 51, 0.06) 0px 1px 1px, rgba(47, 49, 51, 0.07) 0px 2px 9px;
+    border: 1px solid var(--lmdc-sys-color-outline);
+
+  }
+
+  &.lmdc-card--outlined {
+    border: 1px solid var(--lmdc-sys-color-outline);
+
+  }
+  
+  &.lmdc-card--filled {
+    background-color: var(--lmdc-sys-color-surface-variant);
+  }
+ 
+}
+
+.lmdc-card--outline {
+  box-shadow: none;
+  border: 1px solid
+}
+
+table.lmdc-card {
+  box-shadow: rgba(47, 49, 51, 0.05) 0px 0px 1px, rgba(47, 49, 51, 0.06) 0px 1px 1px, rgba(47, 49, 51, 0.07) 0px 2px 9px;
+  border-radius: 4px;
+  padding: 0px;
+  display: table;
+
+}

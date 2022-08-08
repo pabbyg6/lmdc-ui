@@ -1,30 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @use './../projects/components/index' as lmdc-core;
-:root {
-  --primary-color: #4056F4;
-}
-
-$my-color-theme: lmdc-core.color-define-palette((primary-color: #4056F4,
-secondary-color: black,
-surface-color: orange,
-error-color: blue));
 
 
 
-@include lmdc-core.button-theme((primary: #95D7AE, accent: red))  {
-  .lmdc-button {
-    border-radius: 12px;
-  }
-}; 
-.hero-button {
-  
 
-    
-    @include lmdc-core.button-theme((primary: #008000, accent: red))  {
-      @include lmdc-core.button-density((padding: 12px))
-    }; 
 
-  @include lmdc-core.button-density((border-radius: 12px, border-width: 0))
-
+ 
+.terrarium {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
 
 }
+
+
+.terrarium > * {
+  margin: 16px 0;
+}
+
+

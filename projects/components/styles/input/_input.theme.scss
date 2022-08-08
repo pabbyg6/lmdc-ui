@@ -77,7 +77,7 @@ input.lmdc-input {
   right: 0;
   bottom: 0;
 
-  border: 1px solid #D5D5D5;
+  border: 1px solid var(--lmdc-sys-color-outline);
 
   border-radius: 4px;
   box-sizing: border-box;
@@ -100,7 +100,7 @@ input.lmdc-input {
 
    &--active {
     & .lmdc-form-field-outline {
-      border-color: var(--primary-color)
+      border-color: var(--lmdc-sys-color-primary);
 
     }
   }

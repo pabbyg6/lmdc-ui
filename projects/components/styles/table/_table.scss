@@ -14,9 +14,8 @@ tr.lmdc-table-row:last-child {
 }
 table.lmdc-table {
   width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  
+  table-layout: fixed;  
+  border-spacing: 0;
 
   & th {
     padding: 14px 16px;

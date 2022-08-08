@@ -15,7 +15,7 @@ import { LmdcButtonAppearance, LmdcButtonColor, LmdcButtonSize } from './typings
 
   },
 })
-export class ButtonUi implements OnInit {
+export class LmdcButton implements OnInit {
 
 
 
